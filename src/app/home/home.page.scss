@@ -1,0 +1,72 @@
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+//clase para elementos del contenedor
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+//clase para tamaño del contenedor
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+//clase para el color y margen del contenedor
+#container a {
+  text-decoration: none;
+}
+.titulo1{
+  text-align: center;
+  padding-top: 50px; /* Espaciado desde la parte superior */
+  font-size: 55px;
+  font-weight: bold;
+  padding-bottom: 50px;/* Espaciado desde la parte inferior*/
+}
+
+
+
+.subsubtitulo{
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 20px;/* Espaciado desde la parte inferior*/
+}
+.form-container {
+  width: 80%;
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 20px; /* Agregar espacio alrededor del contenedor */
+}
+
+.form-list {
+  margin-bottom: 20px; /* Agregar espacio entre la lista y el botón */
+}
+.gift-container{
+  width: 100%;
+  height: 130px;
+//clase del segundo gif del home
+
+}
+.gift-container-1{
+  width: 100%;
+  height: 150px;
+  //clase del segundo gif del home
+}
+.img
+{
+  --background: url(home.page.spec.ts) 0 0/100% 100% no-repeat;
+  --background: url(../../assets/img/principal.jpg)no-repeat center /cover;
+}
+.img-1
+{
+  --background: url(../../assets/img/chile.VEGAS.gif)no-repeat center /cover;
+  width: 100%;
+
+}

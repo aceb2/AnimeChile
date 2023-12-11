@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title>Wiki Anime Genero</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item *ngFor="let anime of animes" lines="full" class="anime-item" class="img-1">
+      <ion-label >
+        <h2>{{ anime.title }}</h2>
+        <p class="genres">Genero:{{ formatGenres(anime) }}</p>
+        <p>Episodios:{{anime.episodes}}</p>
+        <p>Año:{{anime.year}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

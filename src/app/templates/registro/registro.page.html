@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title>Registro de Usuario</ion-title>
+  </ion-toolbar>
+ <!-- Estos elementos de Ionic se utilizan para crear la barra de encabezado de la aplicaccion --> 
+</ion-header>
+<br>
+<ion-content [fullscreen]="true" class="img">
+  <br>
+  <!-- Salto de linea de la pagina --> 
+  <section class="ion-padding" class="neon-border2">
+    <article class="ion-padding">
+      <h1 class="blanco ion-text-center titulo all">Formulario</h1>
+    </article>
+    <!--representa un articulo-->
+    <nav>
+      <!-- Representa los formularios que estan abajo con los campos de estos y los iconos.-->
+        <ion-item class="all">
+          <ion-label position="floating" class="blanco" ><ion-icon name="person"></ion-icon> Nombre usuario</ion-label>
+          <ion-input class="blanco"  name="username" required [(ngModel)]="datos.username"></ion-input>
+        </ion-item>
+        <ion-item class="all">
+          <ion-label position="floating" class="blanco"><ion-icon name="lock-closed"></ion-icon> Password</ion-label>
+          <ion-input class="blanco"  name="password" type="password" required [(ngModel)]="datos.password"></ion-input>
+        </ion-item>
+        <ion-item class="all">
+          <ion-label position="floating" class="blanco"><ion-icon name="mail"></ion-icon> Correo electrónico</ion-label>
+          <ion-input class="blanco"  name="email" type="email" required [(ngModel)]="datos.correo"></ion-input>
+        </ion-item>
+        <ion-button expand="block" class="ion-margin-top" id="present-alert_1"  type="submit" (click)="register()">Registrarse</ion-button>
+        <ion-alert trigger="present-alert_1" class="custom-alert" header="Usuario Registrado Correctamente" [buttons]="alertButtons"></ion-alert>
+    </nav>
+    <ion-button  expand="block" class="ion-margin-top all a" routerLink="/login" > Volver al Iniciar sesion</ion-button>
+  </section>
+</ion-content>
+<nav>
+  <!-- Estos elementos de Ionic se utilizan para crear la barra de pie de la aplicaccion --> 
+  <ion-toolbar color="tertiary">
+      <ion-title  class="ion-text-center"> <ion-icon class="icon2" name="logo-whatsapp"></ion-icon>
+      <ion-icon class="icon" name="logo-instagram"></ion-icon> <ion-icon class="icon1" name="logo-facebook"></ion-icon>
+      <ion-icon class="icon3" name="logo-twitter"></ion-icon> <ion-icon class="icon4" name="logo-wechat"></ion-icon> </ion-title>
+    </ion-toolbar>
+</nav>

@@ -1,0 +1,35 @@
+<ion-header [translucent]="true" class="">
+  <ion-toolbar class="">
+    <ion-buttons slot="start">
+      <ion-menu-button class=""></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="">Listado  Animes</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- Estos elementos de Ionic se utilizan para crear la barra de encabezado de la página -->
+<ion-content [fullscreen]="true" class="img ion-card">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="10">
+        <ion-button [routerLink]="['/agregar']">
+          <ion-icon name="cloud-circle"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let animes of animes">
+      <ion-col>
+        <ion-card class="ion-padding">
+          <ion-card-header>
+            <ion-card-title class="negro">{{animes.nombre}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{animes.descripcion}}
+          </ion-card-content>
+          <ion-button color="warning"  [routerLink]="['/editar', animes.id]" ><ion-icon name="create">Modificar</ion-icon></ion-button>
+          <ion-button color="danger" (click)="eliminaranime(animes.id)"><ion-icon name="trash"></ion-icon></ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<!-- Block de contenido donde estak todos los botones de los metodos del crud eliminar,listar,agregar,miodificar -->
